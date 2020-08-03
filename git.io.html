@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta content="width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <title>GIT短链接 | 抖音直链</title>
+    <meta charset='utf-8' />
+    <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+    <link href="css/site.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="js/modernizr.js" type="text/javascript"></script>
+    <script src="js/modernizr-tests.js" type="text/javascript"></script>
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script src="//git.io/javascripts/selectivizr-min.js" type="text/javascript"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id='container'>
+      <div id='bar'>
+        <span id="error" class='arrow_box'>
+          抱歉哟!这是一个无效的网址!
+        </span>
+        <div class='side' id='front'>
+          <form action="//yuri.gear.host/gitio.php" method="post">
+            <h1 class="logo"><a href="/">Git.io</a></h1>
+            <input id="input-url" placeholder="输入要缩短的网址..." type="text" />
+            <button>立即生成</button>
+          </form>
+        </div>
+        <div class='side' id='back'>
+          <h1 class="logo"><a href="/">Git.io</a></h1>
+          <input id="output-url" readonly type="text" />
+          <button id="copy-button">生成成功</button>
+          <span id='copied-msg'>Copied!</span>
+          <a id="restart" href="#">缩短另一个网址</a>
+        </div>
+      </div>
+      
+<p>&nbsp;</p>
+<!-- IP定位 -->   
+<div align="center">
+  <title>test</title>
+  <style type="text/css">
+    
+  </style>
+  <script type="text/javascript" src="https://apis.map.qq.com/tools/geolocation/min?key=E46BZ-WGC3P-N4HD5-LGALJ-FTH4Z-BDFUN&referer=SSSN定位"></script>
+  <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="main">
+    <!--<p>设备型号：<span id="system"></span>&nbsp;&nbsp;-->
+    <!--浏 览 器：<span id="browser"></span>&nbsp;&nbsp;-->
+    来访ＩＰ地址：<span style=" color: #707070;color: #dc3545;" id="ip"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <!--北京时间：<span id="time"></span></p>-->
+    <p>&nbsp;</p>
+    <p>访客实时位置：<span style=" color: #707070;color: #dc3545;" id="address"></span>  &nbsp;&nbsp;&nbsp;&nbsp;您的IP及位置信息已被记录请勿生成非法信息！
+
+  </div>
+</div>
+<script type="text/JavaScript">
+    var geolocation = new qq.maps.Geolocation();
+    var options = {timeout: 3000};
+    $.getJSON('https://api.uomg.com/api/visitor.info', {skey: '774740085'}, function(json) {
+        if (json.code == 1) {
+            $('#system').html(json.system);
+            $('#browser').html(json.browser);
+            $('#ip').html(json.ip);
+            $('#time').html(json.time);
+            getCurLocation();
+        }
+    });
+    function getCurLocation() {
+        geolocation.getLocation(showPrecise, showErr, options);
+    }
+    function showPrecise(position) {
+        if (position.province = position.city) {position.city = '';}
+        $('#address').html(position.nation+position.province+position.city+position.addr);
+        console.log(position);
+    };
+
+    function showErr() {
+        geolocation.getIpLocation(showProbably);
+    };
+    function showProbably(position){
+        if (position.province = position.city) {position.city = '';}
+        $('#address').html(position.nation+position.province+position.city);
+        console.log(position);
+    }
+</script>
+ <!-- IP定位 -->
+        <p>&nbsp;</p>
+      <div align="center"><h3 class="wenzi">【友情提示，个别区域手机网络可能会打不开，WIFI网络下可正常打开短链接】</h3>
+            <p>&nbsp;</p>
+ <div align="center"><h4 class="wenzi">本站仅提供生成服务，对生成内容不了解也不会负责！嫌慢的别用，白嫖就别那么多要求！</h4>
+      <p>&nbsp;</p>
+ <div align="center"><h4 class="wenzi">本程序使用的是git.io接口生成，因此接口是国外的打开速度上可能稍微慢一些</h4>
+       <p>&nbsp;</p>
+ <div align="center"><h4 class="wenzi">git.io接口生成的链接可直接在抖音内打开，生成可能会比较慢请耐心等待！</h4>
+        <p>&nbsp;</p>
+ <div align="center"><h4 class="wenzi">有些域名可能无法生成，或者主页无法生成请改为文章页面生成谢谢！</h4>
+<p>&nbsp;</p>
+
+      <footer>
+          <div align="center">
+        <a href="https://masuc.cn">免费源码</a> &copy; <span id="year">2020</span> Git.io Inc. All rights reserved.
+      </footer>
+    </div>
+  </body>
+  <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+  <script src="js/ZeroClipboard.js" type="text/javascript"></script>
+  <script src="js/jquery.defaultvalue.js" type="text/javascript"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+  GitIO.init();
+  var currentYear = (new Date).getFullYear();
+  $("#year").text( currentYear );
+/*
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '4f919d1df5a1f504b3000026');
+    t.src = '//secure.gaug.es/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+*/
+});
+
+var GitIO = {
+  url: 'https://git.io',
+  clipboard: '',
+
+  init: function() {
+    GitIO.initBrowserFallbacks();
+    GitIO.initClipboard();
+    GitIO.observeFormSubmissions();
+    GitIO.observeRestarts();
+  },
+
+  initBrowserFallbacks: function() {
+    if (!Modernizr.input.placeholder) {
+      $('input[placeholder]').each(function(input) {
+        $(this).defaultValue($(this).attr('placeholder'), 'active', 'inactive');
+      });
+    }
+  },
+
+  initClipboard: function() {
+    ZeroClipboard.config({ forceHandCursor: true, moviePath: '//git.io/flash/ZeroClipboard.swf' });
+    GitIO.clipboard = new ZeroClipboard($('#copy-button'));
+
+    GitIO.clipboard.on('load', function (client) {
+
+      GitIO.clipboard.on('mouseover', function (client) {
+        $('#copy-button').addClass('hover');
+      });
+
+      GitIO.clipboard.on( 'datarequested', function(client) {
+        GitIO.clipboard.setText($('#output-url').val());
+        $('#copy-button').addClass('active');
+        $('#copied-msg').show();
+      });
+
+      GitIO.clipboard.on( 'complete', function(client, args) {
+        $('#copy-button').removeClass('active');
+      });
+    })
+  },
+
+  observeFormSubmissions: function() {
+    $('form').submit(function(e) {
+      var form = $(e.target)
+      e.preventDefault();
+
+      $.ajax(
+        { type: form.attr('method')
+        , url: form.attr('action')
+        , data:
+          { url: $('#input-url').val()
+          }
+        , success: function(data) {
+            var outputURL = GitIO.url + "/" + data;
+            $('#output-url').val(outputURL).select();
+            $('#input-url').removeClass('error');
+            $('.arrow_box').hide();
+            $('#bar').addClass('flipped');
+          }
+        , error: function(xhr, ajaxOptions, thrownError) {
+            $('#error').text(xhr.responseText)
+            $('#input-url').addClass('error');
+            $('.arrow_box').show();
+          }
+        }
+      )
+    });
+  },
+
+  observeRestarts: function() {
+    $('a#restart').click(function(e) {
+      e.preventDefault();
+      $('#input-url').val('').focus();
+      $('#output-url').val('');
+      $('#copied-msg').hide();
+      $('#bar').removeClass('flipped');
+    });
+  }
+};
+    GitIO.url = "https://git.io";
+  </script>
+</html>
