@@ -32,7 +32,60 @@
           <a id="restart" href="#">缩短另一个网址</a>
         </div>
       </div>
-      
+      <p>&nbsp;</p>
+<!-- IP定位 -->   
+<div align="center">
+  <title>test</title>
+  <style type="text/css">
+    
+  </style>
+  <script type="text/javascript" src="https://apis.map.qq.com/tools/geolocation/min?key=E46BZ-WGC3P-N4HD5-LGALJ-FTH4Z-BDFUN&referer=SSSN定位"></script>
+  <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="main">
+    <!--<p>设备型号：<span id="system"></span>&nbsp;&nbsp;-->
+    <!--浏 览 器：<span id="browser"></span>&nbsp;&nbsp;-->
+    来访ＩＰ地址：<span style=" color: #707070;color: #dc3545;" id="ip"></span>&nbsp;&nbsp;&nbsp;&nbsp;
+    <!--北京时间：<span id="time"></span></p>-->
+    <p>&nbsp;</p>
+    <p>访客实时位置：<span style=" color: #707070;color: #dc3545;" id="address"></span>  &nbsp;&nbsp;&nbsp;&nbsp;您的IP及位置信息已被记录请勿生成非法信息！
+
+  </div>
+</div>
+<script type="text/JavaScript">
+    var geolocation = new qq.maps.Geolocation();
+    var options = {timeout: 3000};
+    $.getJSON('https://api.uomg.com/api/visitor.info', {skey: '774740085'}, function(json) {
+        if (json.code == 1) {
+            $('#system').html(json.system);
+            $('#browser').html(json.browser);
+            $('#ip').html(json.ip);
+            $('#time').html(json.time);
+            getCurLocation();
+        }
+    });
+    function getCurLocation() {
+        geolocation.getLocation(showPrecise, showErr, options);
+    }
+    function showPrecise(position) {
+        if (position.province = position.city) {position.city = '';}
+        $('#address').html(position.nation+position.province+position.city+position.addr);
+        console.log(position);
+    };
+
+    function showErr() {
+        geolocation.getIpLocation(showProbably);
+    };
+    function showProbably(position){
+        if (position.province = position.city) {position.city = '';}
+        $('#address').html(position.nation+position.province+position.city);
+        console.log(position);
+    }
+</script>
+ <!-- IP定位 -->
       <div align="center"><h3 class="wenzi">【友情提示,】</h3>
             <p>&nbsp;</p>
  <div align="center"><h4 class="wenzi">本站仅提供生成服务，对生成内容不了解也不会负责！</h4>
@@ -47,7 +100,6 @@
 
 
       <footer>
-        <a href="https://masuc.cn">免费源码</a>
         <a href="https://github.com/site/privacy">Privacy</a>
         <a href="https://github.com/security">Security</a>
         <a href="https://mabbs.github.io/">Mayx Blog</a>
